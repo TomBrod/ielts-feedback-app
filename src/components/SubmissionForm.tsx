@@ -171,9 +171,11 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
             className={`text-xs font-medium px-2 py-1 rounded-full ${
               wordCount === 0
                 ? "bg-[#1F3E9C]/5 text-[#1F3E9C]/40"
-                : underMinimum
+                : underMinimum && task === "task1"
                 ? "bg-amber-100 text-amber-700"
-                : "bg-green-100 text-green-700"
+                : wordCount > 0
+                ? "bg-green-100 text-green-700"
+                : "bg-[#1F3E9C]/5 text-[#1F3E9C]/40"
             }`}
           >
             {wordCount} words
@@ -189,11 +191,9 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
           required
         />
 
-        {underMinimum && (
+        {underMinimum && task === "task1" && (
           <p className="mt-2 text-sm text-amber-600 bg-amber-50 rounded-lg px-3 py-2">
-            Your response is under the {task === "task1" ? "Task 1" : "Task 2"}{" "}
-            minimum of {minWords} words. You can still submit, but you may be
-            penalised for being under-length.
+            Your response is under the Task 1 minimum of {TASK1_MIN} words. You can still submit, but you may be penalised for being under-length.
           </p>
         )}
 
