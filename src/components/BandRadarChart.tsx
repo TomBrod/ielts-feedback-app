@@ -42,29 +42,30 @@ export default function BandRadarChart({ scores, task }: Props) {
         <PolarGrid stroke="#e2e8f0" />
         <PolarAngleAxis
           dataKey="criterion"
-          tick={{ fill: "#475569", fontSize: 12, fontWeight: 500 }}
+          tick={{ fill: "#1F3E9C", fontSize: 12, fontWeight: 500 }}
         />
         <PolarRadiusAxis
           angle={90}
           domain={[0, 9]}
           tickCount={4}
-          tick={{ fill: "#94a3b8", fontSize: 11 }}
+          tick={{ fill: "#1F3E9C", fontSize: 11 }}
         />
         <Radar
           name="Band Score"
           dataKey="score"
-          stroke="#3b82f6"
-          fill="#3b82f6"
-          fillOpacity={0.25}
+          stroke="#E8322A"
+          fill="#E8322A"
+          fillOpacity={0.2}
           strokeWidth={2}
         />
         <Tooltip
           formatter={(value) => [`Band ${value}`, "Score"]}
           contentStyle={{
             backgroundColor: "#fff",
-            border: "1px solid #e2e8f0",
+            border: "1px solid #1F3E9C20",
             borderRadius: "8px",
             fontSize: "13px",
+            color: "#1F3E9C",
           }}
         />
       </RadarChart>

@@ -70,11 +70,11 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 space-y-6"
+      className="bg-white rounded-2xl shadow-sm border border-[#1F3E9C]/15 p-8 space-y-6"
     >
       {/* Task selector */}
       <div>
-        <label className="block text-sm font-semibold text-slate-700 mb-3">
+        <label className="block text-sm font-semibold text-[#1F3E9C] mb-3">
           Select Task
         </label>
         <div className="grid grid-cols-2 gap-3">
@@ -85,8 +85,8 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
               onClick={() => setTask(t)}
               className={`py-3 px-4 rounded-xl border-2 font-semibold text-sm transition-all ${
                 task === t
-                  ? "border-[#E8322A] bg-red-50 text-[#E8322A]"
-                  : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
+                  ? "border-[#E8322A] bg-[#E8322A] text-white"
+                  : "border-[#1F3E9C]/30 bg-white text-[#1F3E9C] hover:border-[#1F3E9C]"
               }`}
             >
               <span className="block text-base font-bold">
@@ -106,7 +106,7 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
       <div>
         <label
           htmlFor="question"
-          className="block text-sm font-semibold text-slate-700 mb-2"
+          className="block text-sm font-semibold text-[#1F3E9C] mb-2"
         >
           Exam Question / Prompt
         </label>
@@ -116,7 +116,7 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
           onChange={(e) => setQuestion(e.target.value)}
           placeholder="Paste the full IELTS question or prompt here..."
           rows={4}
-          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#E8322A]/40 focus:border-transparent resize-none text-sm leading-relaxed"
+          className="w-full rounded-xl border border-[#1F3E9C]/20 px-4 py-3 text-[#1F3E9C] placeholder-[#1F3E9C]/40 focus:outline-none focus:ring-2 focus:ring-[#E8322A]/40 focus:border-transparent resize-none text-sm leading-relaxed"
           required
         />
       </div>
@@ -124,17 +124,17 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
       {/* Diagram input (Task 1 only) */}
       {task === "task1" && (
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-3">
+          <label className="block text-sm font-semibold text-[#1F3E9C] mb-3">
             Provide the diagram for the Task 1 prompt
           </label>
 
-          <div className="rounded-xl border border-slate-200 p-4">
+          <div className="rounded-xl border border-[#1F3E9C]/20 p-4">
             <input
               ref={fileInputRef}
               type="file"
               accept="image/jpeg,image/png,image/gif,image/webp"
               onChange={handleFileChange}
-              className="block w-full text-sm text-slate-600 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-red-50 file:text-[#E8322A] hover:file:bg-red-100 cursor-pointer"
+              className="block w-full text-sm text-[#1F3E9C]/60 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-[#E8322A] file:text-white hover:file:bg-[#c9281f] cursor-pointer"
             />
             {diagramPreview && (
               <div className="mt-3 relative inline-block">
@@ -142,12 +142,12 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
                 <img
                   src={diagramPreview}
                   alt="Diagram preview"
-                  className="max-h-56 rounded-lg border border-slate-200 object-contain"
+                  className="max-h-56 rounded-lg border border-[#1F3E9C]/20 object-contain"
                 />
                 <button
                   type="button"
                   onClick={handleRemoveImage}
-                  className="absolute -top-2 -right-2 w-6 h-6 bg-slate-700 text-white rounded-full text-xs flex items-center justify-center hover:bg-slate-900 transition-colors"
+                  className="absolute -top-2 -right-2 w-6 h-6 bg-[#1F3E9C] text-white rounded-full text-xs flex items-center justify-center hover:bg-[#152c7a] transition-colors"
                   aria-label="Remove image"
                 >
                   ✕
@@ -163,14 +163,14 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
         <div className="flex items-center justify-between mb-2">
           <label
             htmlFor="response"
-            className="block text-sm font-semibold text-slate-700"
+            className="block text-sm font-semibold text-[#1F3E9C]"
           >
             Your Written Response
           </label>
           <span
             className={`text-xs font-medium px-2 py-1 rounded-full ${
               wordCount === 0
-                ? "bg-slate-100 text-slate-500"
+                ? "bg-[#1F3E9C]/5 text-[#1F3E9C]/40"
                 : underMinimum
                 ? "bg-amber-100 text-amber-700"
                 : "bg-green-100 text-green-700"
@@ -185,7 +185,7 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
           onChange={(e) => setResponse(e.target.value)}
           placeholder="Paste your written response here..."
           rows={12}
-          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#E8322A]/40 focus:border-transparent resize-none text-sm leading-relaxed"
+          className="w-full rounded-xl border border-[#1F3E9C]/20 px-4 py-3 text-[#1F3E9C] placeholder-[#1F3E9C]/40 focus:outline-none focus:ring-2 focus:ring-[#E8322A]/40 focus:border-transparent resize-none text-sm leading-relaxed"
           required
         />
 
@@ -207,7 +207,7 @@ export default function SubmissionForm({ onSubmit, loading }: Props) {
       <button
         type="submit"
         disabled={loading || !question.trim() || !response.trim()}
-        className="w-full py-3.5 bg-[#E8322A] hover:bg-[#c9281f] text-white font-semibold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-base"
+        className="w-full py-3.5 bg-[#F5C000] hover:bg-[#dca900] text-[#1F3E9C] font-semibold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-base"
       >
         {loading ? "Analysing..." : "Get Feedback"}
       </button>

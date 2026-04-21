@@ -23,11 +23,8 @@ function overallBandLabel(band: number): string {
   return "Developing";
 }
 
-function overallBandColor(band: number): string {
-  if (band >= 8) return "from-emerald-500 to-emerald-600";
-  if (band >= 7) return "from-blue-500 to-blue-600";
-  if (band >= 6) return "from-amber-500 to-amber-600";
-  return "from-red-400 to-red-500";
+function overallBandColor(_band: number): string {
+  return "from-[#1F3E9C] to-[#172d80]";
 }
 
 export default function FeedbackDisplay({ feedback, task }: Props) {
@@ -80,7 +77,7 @@ export default function FeedbackDisplay({ feedback, task }: Props) {
         <p className="text-white/80 text-sm font-semibold uppercase tracking-widest mb-1">
           Estimated Overall Band
         </p>
-        <p className="text-7xl font-bold mb-1">{overallBand}</p>
+        <p className="text-7xl font-bold mb-1" style={{ color: "#F5C000" }}>{overallBand}</p>
         <p className="text-white/90 text-xl font-medium">
           {overallBandLabel(overallBand)}
         </p>
@@ -90,8 +87,8 @@ export default function FeedbackDisplay({ feedback, task }: Props) {
       </div>
 
       {/* Radar chart */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <h2 className="text-base font-semibold text-[#1B2B4B] mb-4 text-center">
+      <div className="bg-white rounded-2xl border border-[#1F3E9C]/15 shadow-sm p-6">
+        <h2 className="text-base font-semibold text-[#1F3E9C] mb-4 text-center">
           Score Breakdown
         </h2>
         <BandRadarChart
@@ -107,8 +104,8 @@ export default function FeedbackDisplay({ feedback, task }: Props) {
         <div className="grid grid-cols-4 gap-3 mt-4">
           {criteriaCards.map(({ key, label, data }) => (
             <div key={key} className="text-center">
-              <p className="text-2xl font-bold text-slate-800">{data.band}</p>
-              <p className="text-xs text-slate-500 leading-tight mt-0.5">
+              <p className="text-2xl font-bold text-[#F5C000]">{data.band}</p>
+              <p className="text-xs text-[#1F3E9C]/50 leading-tight mt-0.5">
                 {label.split(" ").slice(0, 2).join(" ")}
               </p>
             </div>
@@ -118,7 +115,7 @@ export default function FeedbackDisplay({ feedback, task }: Props) {
 
       {/* Criterion cards */}
       <div>
-        <h2 className="text-xl font-bold text-[#1B2B4B] mb-4">
+        <h2 className="text-xl font-bold text-[#1F3E9C] mb-4">
           Detailed Feedback
         </h2>
         <div className="grid sm:grid-cols-2 gap-4">
@@ -136,11 +133,11 @@ export default function FeedbackDisplay({ feedback, task }: Props) {
       </div>
 
       {/* Model answer */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
+      <div className="bg-white rounded-2xl border border-[#1F3E9C]/15 shadow-sm p-6 space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-[#1B2B4B]">Model Answer</h2>
-            <p className="text-sm text-slate-500 mt-0.5">
+            <h2 className="text-xl font-bold text-[#1F3E9C]">Model Answer</h2>
+            <p className="text-sm text-[#1F3E9C]/50 mt-0.5">
               Band 8–9 level response to the same question
             </p>
           </div>
@@ -149,7 +146,7 @@ export default function FeedbackDisplay({ feedback, task }: Props) {
             className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
               copied
                 ? "bg-green-100 text-green-700 border border-green-200"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
+                : "bg-[#1F3E9C]/5 text-[#1F3E9C] hover:bg-[#1F3E9C]/10 border border-[#1F3E9C]/20"
             }`}
           >
             {copied ? (
@@ -189,8 +186,8 @@ export default function FeedbackDisplay({ feedback, task }: Props) {
             )}
           </button>
         </div>
-        <div className="bg-slate-50 rounded-xl p-5 border border-slate-100">
-          <p className="text-slate-700 text-sm leading-relaxed whitespace-pre-wrap">
+        <div className="bg-[#1F3E9C]/3 rounded-xl p-5 border border-[#1F3E9C]/10">
+          <p className="text-[#1F3E9C] text-sm leading-relaxed whitespace-pre-wrap">
             {modelAnswer}
           </p>
         </div>

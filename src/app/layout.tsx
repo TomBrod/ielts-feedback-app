@@ -29,7 +29,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header style={{ backgroundColor: "#1B2B4B" }} className="px-6 py-4">
+        <header style={{ backgroundColor: "#1F3E9C", borderBottom: "3px solid #E8322A" }} className="px-6 py-4">
           <div className="max-w-4xl mx-auto flex items-center gap-4">
             <Image
               src="/brodie-logo.png"

@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1F3E9C;
 }
 
 @theme inline {
@@ -10,15 +10,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-brodie-navy: #1B2B4B;
+  --color-brodie-navy: #1F3E9C;
   --color-brodie-red: #E8322A;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brodie-gold: #F5C000;
 }
 
 body {

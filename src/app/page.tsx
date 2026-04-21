@@ -56,7 +56,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <main className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-4 py-10">
         {!feedback && (
           <SubmissionForm onSubmit={handleSubmit} loading={loading} />
@@ -69,10 +69,10 @@ export default function Home() {
         )}
 
         {loading && (
-          <div className="mt-10 flex flex-col items-center gap-4 text-slate-600">
-            <div className="w-12 h-12 border-4 border-blue-300 border-t-blue-600 rounded-full animate-spin" />
+          <div className="mt-10 flex flex-col items-center gap-4 text-[#1F3E9C]">
+            <div className="w-12 h-12 border-4 border-[#E8322A]/30 border-t-[#E8322A] rounded-full animate-spin" />
             <p className="text-lg font-medium">Analysing your writing...</p>
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-[#1F3E9C]/50">
               This usually takes 10–20 seconds
             </p>
           </div>
