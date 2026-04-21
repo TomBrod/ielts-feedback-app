@@ -69,6 +69,42 @@ Grammatical Range & Accuracy (both tasks):
 - Band 3–4: Uses only a very limited range of structures with only rare use of subordinate clauses. Errors are frequent and may impede meaning.
 `;
 
+const CALIBRATION_EXAMPLES = `
+CALIBRATION EXAMPLES — use these to anchor your scoring:
+
+Example 1 — Band 6/7 essay (TR:6, CC:7, LR:7, GRA:6)
+Question: Some people believe that entertainers are paid too much and their impact on society is negative, while others disagree and believe that they deserve the money that they make because of their positive effects on society. Discuss both opinions and give your own opinion.
+Essay: "The entertainment industry is one of the largest sectors in all around the world. Some think that the people who work in that industry earn too much money considering their bad influence on society, and I agree. Others, however, believe that their positive impact on others is worth the money that they are paid. On the one hand, there is no doubt that show business is an enormous and unfairly well paid sector. In addition to that, members of it do not add real value, compared to others like, for instance, education workers. Although in some countries teachers live with unreasonable wages, their responsibility, is extremely valuable for next generations become better people. Whereas a singer can earn double their yearly salary from one concert. The other important point is, for a balanced and equal society, the difference between income levels must not be very high. Regardless than their contribution, no one should make billions of dollars that easily, because that imbalance does have a significant negative impact on societies. On the other hand, some people think that entertainers' contribution to the modern life is worth the money they earn. It can be understood that for many people, watching a movie or going to a concert is irreplaceable with other activities; therefore, they think that their positive impact is crucial for a significant proportion of people. In addition to that, celebrities do compromise their privacy and freedom with being known by many others. In exchange of that, they do deserve a comfortable life with significantly better paychecks. In conclusion, despite their minimal contribution with their work to the people and sacrifice from their private life; I believe that their impact is far from being positive and they are not paid fairly or balanced with others."
+Scores: TR:6, CC:7, LR:7, GRA:6
+Reasoning:
+- TR:6 — Covers both parts of the prompt. Position is clear but main ideas sometimes lack support and coverage is uneven.
+- CC:7 — Information is logically organised with clear progression. More sophisticated cohesive devices are present e.g. "The other important point is..." showing referencing beyond basic connectives.
+- LR:7 — Sufficient range for flexibility and precision. Includes less common items and accurate collocation e.g. "compromise their privacy and freedom", "minimal contribution". Some less precise choices e.g. "a balanced and equal society".
+- GRA:6 — Mix of simple and complex sentences but errors appear in more complex structures.
+
+Example 2 — Band 7/6 essay (TR:7, CC:7, LR:7, GRA:6)
+Question: Young people are leaving their homes in rural areas to work or study in cities. What are the reasons? Do the advantages of this development outweigh the drawbacks?
+Essay: "The comparison of standards of the cities and small town or villages has been always a debate. Recently, teenagers choose to live in the cities rather than their home villages because of school or job opportunities. This essay will discuss multiple reasons behind this trend and explain why the advantages of being in a city do indeed outweigh its drawbacks. There are several reasons to desire living in urban areas. Firstly, it gives people an opportunity to study in better schools which cannot be found in rural areas. Since in the modern world education means very much for people's future, it is crucial to have higher education degrees for those individuals to find well-paid jobs. In addition to that, city life provides people with completely different experiences than their home villages. Thanks to the schools, work or social gathering places, they get to meet a greater number of people from all around the country compared to their rural towns which is crucial for one's personal development. Lastly, in the cities, not only they get bigger number of job options, but also they can earn larger amount of money. It is very well know that job market is significantly limited in the villages also the current jobs barely pay enough. It is clearly seen that benefits of leaving villages outweigh its few number of deficits. It is worth to mention that people face some issues, such as being away from their extended family, more competitive and challenging job market, and substantially more expensive living cost, when they move to the cities. Advantages like learning and exploring new experiences, getting a better education leading to a better paid job and having an interesting career, however, surpass the number of the drawbacks of this development. To conclude, there are various reasons for young generation to leave their homes to live in the cities and this movement's benefits easily outweigh its disadvantages."
+Scores: TR:7, CC:7, LR:7, GRA:6
+Reasoning:
+- TR:7 — Addresses all parts of the prompt clearly. Position is maintained throughout. Main ideas are relevant and developed.
+- CC:7 — Clear progression throughout. Good use of cohesive devices and paragraphing.
+- LR:7 — Good collocations e.g. "competitive and challenging job market", "crucial for one's personal development". Some inappropriacies e.g. "few number of deficits".
+- GRA:6 — Some complex structures used but errors are present. Mix of simple and complex sentences.
+
+Example 3 — Band 8 essay (TR:8, CC:8, LR:8, GRA:8)
+Question: Some people believe that it is the responsibility of individuals to take care of their own health and diet. Others however believe that governments should make sure that their citizens have a healthy diet. Discuss both views and give your opinion.
+Essay: "Nowadays an increasing number of people are becoming concerned about their health and the quality of their diet. There are two diametrically opposed opinions on the matter. Some people believe that each and every individual is responsible for their own health while others state that it is the government that must ensure that the citizens have healthy eating habits. Personally, I believe that people bear full responsibility for their diets for a number of reasons. First, nowadays there is a vast variety of products that everyone can choose from, ensuring a balanced diet consisting of different types of products with sufficient vitamins, proteins, carbohydrates and fats. Everyone can balance their diets according to these factors and also based on their taste preferences. For example vegetarians will prefer beans rich in protein while omnivorous eaters might opt for meat instead. Secondly, while governments cannot considerably vary in their healthy eating programs usually adhering to 'one size fits all' approach, individuals know exactly what they need in order to keep fit and healthy both generally speaking and in terms of food. We take tailored approach as we know exactly what we need to succeed in life, be strong and healthy. However, others argue that the government is fully responsible for the kind of food its population consume because they make decisions regarding the quality of food their country produce and import as well as prices. For instance, in many developing countries people rarely have access to high quality food, thus being forced to choose something cheap like fast food. Moreover, the government can introduce legislation as regards to what kind of food can be promoted, seen for example in many European countries where the advertising of fast food, alcohol and cigarettes is prohibited. These measure, it is argued, can affect the way we eat and control the diets of the whole population. In conclusion, while the governments may play a role in the choice of food of its citizens, it is still the responsibility of every individual whether to eat healthy diet or not due to many reasons being that a variety of methods to balance their diets or their finances. After all our life is in our hands!"
+Scores: TR:8, CC:8, LR:8, GRA:8
+Reasoning:
+- TR:8 — Fully addresses all parts of the task. Clear and well-developed position. Ideas are well-supported and extended throughout.
+- CC:8 — Skilfully manages paragraphing. Cohesion is smooth and does not draw attention to itself. Clear progression throughout.
+- LR:8 — Wide range of vocabulary used with flexibility and precision. Strong collocations e.g. "diametrically opposed", "omnivorous eaters", "one size fits all approach", "vast variety". Minor imprecisions do not detract from overall quality.
+- GRA:8 — Wide range of complex structures used accurately. Error-free sentences are frequent. No systematic errors present. Note: systematic errors such as repeated subject-verb agreement mistakes or consistent article errors would cap GRA at Band 7 regardless of range.
+
+These examples should be used to anchor your scoring. When assessing a new essay, compare it against these benchmarks before assigning band scores.
+`;
+
 function buildSystemPrompt(task: "task1" | "task2"): string {
   const taskLabel = task === "task1" ? "Task 1" : "Task 2";
   const firstCriterion =
@@ -96,7 +132,7 @@ ${firstCriterion}
 ${ccDescriptors}
 ${LR_DESCRIPTORS}
 ${GRA_DESCRIPTORS}
-
+${CALIBRATION_EXAMPLES}
 Be honest, specific, and constructive. Mirror the tone and standards of a real IELTS examiner.
 
 Important: A typical competent non-native English speaker writing a reasonable essay should score in the 5.5–6.5 range. A good essay with only minor errors should score 7–7.5. Reserve bands below 5 for responses with serious communication breakdown. Do not inflate scores, but do not penalise harshly for minor or occasional errors.
