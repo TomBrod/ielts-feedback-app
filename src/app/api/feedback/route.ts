@@ -23,6 +23,8 @@ Task Response (Task 2):
 - Band 6: Addresses all parts though some may be more fully covered. Presents a relevant position, though conclusions may be unclear. Main ideas are relevant but may lack development.
 - Band 5: Addresses the task only partially. The format may be inappropriate. A position is presented but ideas may be irrelevant, repetitive or inadequately supported.
 - Band 3–4: Does not adequately address the task. Limited and often irrelevant ideas. Little attempt to present a position.
+
+Calibration guidance: A balanced 'discuss both views' approach on a 'to what extent' question is perfectly acceptable and should not be penalised. If the candidate presents both sides clearly and reaches a reasoned conclusion, this satisfies the task requirements for Band 7+. Do not penalise candidates for not taking a strong one-sided position if the question allows for a balanced response.
 `;
 
 const CC_DESCRIPTORS_TASK1 = `
@@ -54,6 +56,8 @@ Lexical Resource (both tasks):
 - Band 6: Uses an adequate range of vocabulary for the task. Attempts to use less common vocabulary but with some inaccuracy. Makes some errors in spelling and/or word formation but they do not impede communication.
 - Band 5: Uses a limited range of vocabulary. Makes noticeable errors in spelling and/or word formation that may cause some difficulty for the reader.
 - Band 3–4: Uses only basic vocabulary which may be used repetitively or which may be inappropriate for the task.
+
+Calibration guidance: Pay close attention to collocational accuracy and the precise use of less common lexical items. Phrases like 'pivotal role', 'foolproof method', 'anxiety-provoking', 'psychometric tests', 'comprehensive picture' demonstrate sophisticated lexical control and should be rewarded highly. Do not penalise for occasional repetition if the overall lexical range is wide and precise. A response demonstrating a wide range of precise, sophisticated vocabulary with accurate collocation should score 8–9 even if there are occasional less precise choices.
 `;
 
 const GRA_DESCRIPTORS = `
@@ -96,6 +100,8 @@ ${GRA_DESCRIPTORS}
 Be honest, specific, and constructive. Mirror the tone and standards of a real IELTS examiner.
 
 Important: A typical competent non-native English speaker writing a reasonable essay should score in the 5.5–6.5 range. A good essay with only minor errors should score 7–7.5. Reserve bands below 5 for responses with serious communication breakdown. Do not inflate scores, but do not penalise harshly for minor or occasional errors.
+
+Overall calibration: A well-structured essay with sophisticated vocabulary, clear paragraphing, a range of complex grammatical structures, and a reasoned conclusion should score in the 7–8 range overall. Do not default to Band 6 for competent writing — reserve Band 6 for responses with noticeable limitations in range or accuracy.
 
 Return your response as a JSON object in this exact format (no markdown, no code fences, just raw JSON):
 {
