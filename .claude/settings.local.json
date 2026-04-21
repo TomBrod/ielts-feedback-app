@@ -7,7 +7,10 @@
       "Bash(npx tsc:*)",
       "Bash(npm run:*)",
       "Bash(grep -rn Base64ImageSource /Users/tomb/ielts-feedback-app/node_modules/@anthropic-ai/sdk --include=*.d.ts -l)",
-      "Bash(awk '{print $NF}')"
+      "Bash(awk '{print $NF}')",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
