@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,22 +31,38 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <header style={{ backgroundColor: "#1F3E9C", borderBottom: "3px solid #E8322A" }} className="px-6 py-4">
-          <div className="max-w-4xl mx-auto flex items-center gap-4">
-            <Image
-              src="/brodie-logo.png"
-              alt="Brodie Academy logo"
-              height={45}
-              width={45}
-              style={{ mixBlendMode: "screen", height: 45, width: "auto" }}
-            />
-            <div>
-              <p className="text-white font-bold text-lg leading-tight">
-                Brodie Academy
-              </p>
-              <p className="text-white/80 text-sm leading-tight">
-                Expert IELTS feedback, instantly.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
+            <Link href="/" className="flex items-center gap-4">
+              <Image
+                src="/brodie-logo.png"
+                alt="Brodie Academy logo"
+                height={45}
+                width={45}
+                style={{ mixBlendMode: "screen", height: 45, width: "auto" }}
+              />
+              <div>
+                <p className="text-white font-bold text-lg leading-tight">
+                  Brodie Academy
+                </p>
+                <p className="text-white/80 text-sm leading-tight">
+                  Expert IELTS feedback, instantly.
+                </p>
+              </div>
+            </Link>
+            <nav className="flex items-center gap-1">
+              <Link
+                href="/"
+                className="px-4 py-2 rounded-lg text-sm font-semibold text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="px-4 py-2 rounded-lg text-sm font-semibold text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+              >
+                About
+              </Link>
+            </nav>
           </div>
         </header>
         {children}
