@@ -31,18 +31,35 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header style={{ backgroundColor: "#1F3E9C", borderBottom: "3px solid #E8322A" }} className="px-6 py-4">
-          <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
+        {/* Main header bar */}
+        <header
+          className="relative overflow-hidden"
+          style={{ backgroundColor: "#1F3E9C", minHeight: "80px" }}
+        >
+          {/* Red diagonal accent — bottom-right flourish */}
+          <div
+            className="absolute inset-y-0 right-0 w-64 pointer-events-none"
+            style={{
+              background: "#E8322A",
+              clipPath: "polygon(45% 100%, 100% 0%, 100% 100%)",
+            }}
+          />
+
+          <div
+            className="relative z-10 max-w-6xl mx-auto px-6 flex items-center justify-between gap-4"
+            style={{ minHeight: "80px", paddingTop: "16px", paddingBottom: "16px" }}
+          >
+            {/* Left: logo + name */}
             <Link href="/" className="flex items-center gap-4">
               <Image
                 src="/brodie-logo.png"
                 alt="Brodie Academy logo"
-                height={45}
-                width={45}
-                style={{ mixBlendMode: "screen", height: 45, width: "auto" }}
+                height={50}
+                width={50}
+                style={{ mixBlendMode: "screen", height: 50, width: "auto" }}
               />
               <div>
-                <p className="text-white font-bold text-lg leading-tight">
+                <p className="text-white font-bold text-2xl leading-tight">
                   Brodie Academy
                 </p>
                 <p className="text-white/80 text-sm leading-tight">
@@ -50,6 +67,8 @@ export default function RootLayout({
                 </p>
               </div>
             </Link>
+
+            {/* Right: navigation */}
             <nav className="flex items-center gap-1">
               <Link
                 href="/"
@@ -72,6 +91,7 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
+
         <div className="flex-1">{children}</div>
         <Footer />
       </body>
